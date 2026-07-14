@@ -270,16 +270,34 @@ img { max-width: 100%; display: block; }
 }
 
 /* Gallery */
+.gallery-subhead {
+  font-size: 1.1rem;
+  color: var(--steel-light);
+  margin: 2rem 0 1rem;
+}
+
+.gallery-subhead:first-of-type {
+  margin-top: 0;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .gallery-item {
   aspect-ratio: 4 / 3;
   border-radius: 4px;
   overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .gallery-item.placeholder {
@@ -293,6 +311,65 @@ img { max-width: 100%; display: block; }
   font-size: 0.8rem;
   padding: 0.5rem;
   line-height: 1.4;
+}
+
+/* Before & after pairs */
+.before-after-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.before-after-pair {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.75rem;
+}
+
+.before-after-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.before-after-single .before-after-photos {
+  grid-template-columns: 1fr;
+}
+
+.before-after-photos figure {
+  margin: 0;
+}
+
+.before-after-photos img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+.before-after-photos figcaption {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-top: 0.4rem;
+}
+
+.before-after-photos figure:last-child figcaption {
+  color: var(--orange);
+}
+
+.before-after-label {
+  text-align: center;
+  color: var(--steel-light);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 0.75rem;
 }
 
 /* Service area */
@@ -402,6 +479,7 @@ img { max-width: 100%; display: block; }
   .services-grid { grid-template-columns: repeat(3, 1fr); }
   .shop-mobile { grid-template-columns: 1fr 1fr; }
   .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+  .before-after-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-grid { grid-template-columns: 1fr 1.3fr; }
 }
 
