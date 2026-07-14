@@ -468,6 +468,29 @@ img { max-width: 100%; display: block; }
   margin-top: 0.3rem;
 }
 
+.mobile-location-box {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--orange);
+  border-radius: 4px;
+  padding: 1rem;
+  margin-top: 0.75rem;
+}
+
+.mobile-location-heading {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--orange);
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.mobile-location-box label {
+  margin-top: 0;
+}
+
 .quote-form button {
   margin-top: 1.25rem;
 }

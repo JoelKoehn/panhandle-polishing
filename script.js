@@ -16,9 +16,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var serviceType = document.getElementById('service-type');
   var locationWrap = document.getElementById('location-field-wrap');
+  var locationInput = document.getElementById('location');
 
   function toggleLocationField() {
-    locationWrap.style.display = serviceType.value === 'Mobile' ? 'block' : 'none';
+    var isMobile = serviceType.value === 'Mobile';
+    locationWrap.style.display = isMobile ? 'block' : 'none';
+    if (locationInput) {
+      locationInput.required = isMobile;
+    }
   }
 
   if (serviceType && locationWrap) {
