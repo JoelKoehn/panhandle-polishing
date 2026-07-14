@@ -26,6 +26,25 @@ document.addEventListener('DOMContentLoaded', function () {
     serviceType.addEventListener('change', toggleLocationField);
   }
 
+  var photoInput = document.getElementById('photos');
+  var photoHint = document.getElementById('photos-hint');
+  var photoHintDefault = photoHint ? photoHint.textContent : '';
+
+  if (photoInput && photoHint) {
+    photoInput.addEventListener('change', function () {
+      if (photoInput.files.length > 4) {
+        var trimmed = new DataTransfer();
+        for (var i = 0; i < 4; i++) {
+          trimmed.items.add(photoInput.files[i]);
+        }
+        photoInput.files = trimmed.files;
+        photoHint.textContent = 'Only the first 4 photos were kept (4 photo max).';
+      } else {
+        photoHint.textContent = photoHintDefault;
+      }
+    });
+  }
+
   var yearEl = document.getElementById('year');
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();

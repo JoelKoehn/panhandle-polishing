@@ -189,7 +189,7 @@
           <p>731 Diller Ln<br>Texline, TX 79087</p>
         </div>
 
-        <form name="quote-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" class="quote-form" id="quote-form">
+        <form name="quote-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" class="quote-form" id="quote-form" enctype="multipart/form-data">
           <input type="hidden" name="form-name" value="quote-request">
           <p class="hidden-field">
             <label>Don't fill this out if you're human: <input name="bot-field"></label>
@@ -215,6 +215,10 @@
             <label for="location">Location (if mobile)</label>
             <input type="text" id="location" name="location" placeholder="City, State">
           </div>
+
+          <label for="photos">Truck Photos (optional)</label>
+          <input type="file" id="photos" name="photos" accept="image/*" multiple>
+          <p class="field-hint" id="photos-hint">Up to 4 photos so Colton can see what he's working with.</p>
 
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="4"></textarea>
