@@ -167,9 +167,11 @@ img { max-width: 100%; display: block; }
 /* Hero */
 .hero {
   background:
-    linear-gradient(rgba(26,26,26,0.88), rgba(26,26,26,0.94)),
-    repeating-linear-gradient(135deg, #232323 0 2px, #1a1a1a 2px 40px);
-  padding: 5rem 1.25rem;
+    linear-gradient(rgba(26,26,26,0.55), rgba(26,26,26,0.85)),
+    url('images/gallery/truck-trailer-livestock-arrow.webp');
+  background-size: cover;
+  background-position: center 65%;
+  padding: 6rem 1.25rem;
   text-align: center;
   border-bottom: 4px solid var(--orange);
 }
