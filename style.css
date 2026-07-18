@@ -319,6 +319,7 @@ img { max-width: 100%; display: block; }
 .before-after-grid {
   display: grid;
   grid-template-columns: 1fr;
+  align-items: start;
   gap: 1.25rem;
   margin-bottom: 1rem;
 }
